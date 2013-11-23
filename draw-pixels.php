@@ -34,12 +34,7 @@ while( $x < 256 )
 SDL_PutPixels( $screen, $pixels );
 SDL_Flip( $screen );
 
-$event = null;
-while( SDL_WaitEvent( $event ) )
-{
-	if( SDL_KEYDOWN === $event['type'] )
-		return;
-}
+waitForInput();
 
-SQL_Quit();
+SDL_Quit();
 
