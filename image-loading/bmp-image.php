@@ -30,7 +30,7 @@ if( null === $img )
 }
 
 // Put the image on memory on the screen buffer
-SDL_BlitSurface( $img, null, $screen, null );
+SDL_BlitSurface( $img, null, $screen, array( 'x' => 290, 'y' => 210 ) );
 
 // Refresh the whole screen
 SDL_flip( $screen );
