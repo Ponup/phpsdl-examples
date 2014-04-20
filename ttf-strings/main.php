@@ -7,6 +7,8 @@
 
 require '../common.php';
 
+dl( 'sdl_ttf.' . PHP_SHLIB_SUFFIX );
+
 if( !extension_loaded( 'sdl_ttf' ) )
 {
 	fprintf( STDERR, 'The extension sdl_ttf must be installed to run this script.' . PHP_EOL );
@@ -39,7 +41,7 @@ SDL_BlitSurface($fontSurf, null, $screen, array( 'x' => 40, 'y' => 60 ) );
 $fontSurf = TTF_RenderUTF8_Blended( $font, 'Love conquers all things', array( 'r' => 100, 'g' => 100, 'b' => 200 ) );
 SDL_BlitSurface($fontSurf, null, $screen, array( 'x' => 40, 'y' => 60 + $fontHeight ) );
 
-$fontSurf = TTF_RenderUTF8_Blended( $font, 'El amor conquista todas las cosas', array( 'r' => 50, 'g' => 255, 'b' => 0 ) );
+$fontSurf = TTF_RenderUTF8_Blended( $font, 'El amor lo conquista todo', array( 'r' => 50, 'g' => 255, 'b' => 0 ) );
 SDL_BlitSurface( $fontSurf, null, $screen, array( 'x' => 40, 'y' => 60 + $fontHeight * 2 ) );
 
 SDL_Flip( $screen );

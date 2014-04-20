@@ -1,4 +1,7 @@
 <?php
+
+dl( 'sdl.' . PHP_SHLIB_SUFFIX );
+
 /**
  * Example of how to load a BMP image from disk and draw it on the screen using the PHP-SDL extension.
  *

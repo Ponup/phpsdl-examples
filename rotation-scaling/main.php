@@ -7,6 +7,9 @@
 
 require '../common.php';
 
+dl( 'sdl_image.' . PHP_SHLIB_SUFFIX );
+dl( 'sdl_gfx.' . PHP_SHLIB_SUFFIX );
+
 if( !extension_loaded( 'sdl_gfx' ) )
 {
 	fprintf( STDERR, 'The extension sdl_gfx must be installed to run this script.' . PHP_EOL );

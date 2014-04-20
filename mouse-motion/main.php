@@ -7,6 +7,8 @@
 
 require '../common.php';
 
+dl( 'sdl_image.' . PHP_SHLIB_SUFFIX );
+
 SDL_Init( SDL_INIT_VIDEO );
 
 $earthImage = IMG_Load( 'earth.jpg' );

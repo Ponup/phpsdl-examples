@@ -12,7 +12,7 @@ if( SDL_Init( SDL_INIT_VIDEO ) != 0 )
 	die( SDL_GetError() );
 }
 
-$screen = SDL_SetVideoMode( 640, 480, 32, SDL_HWSURFACE | SDL_DOUBLEBUF );
+$screen = SDL_SetVideoMode( 640, 480, 8, SDL_HWSURFACE | SDL_DOUBLEBUF );
 if( null === $screen )
 {
 	die(SDL_GetError());
@@ -36,7 +36,7 @@ while( true )
 {
 	if( SDL_PollEvent( $event ) )
 	{
-		if( in_array( $event['type'], [ SDL_MOUSEBUTTONDOWN, SDL_QUIT ] ) ) break;
+		if( in_array( $event['type'], array( SDL_MOUSEBUTTONDOWN, SDL_QUIT ) ) ) break;
 	}
 
 	$oldTime = $currentTime;

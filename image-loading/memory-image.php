@@ -1,4 +1,5 @@
 <?php	
+
 /**
  * Example of how to load an image from memory (an array) an draw it on the screen using the PHP-SDL extension.
  *
